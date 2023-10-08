@@ -1,0 +1,34 @@
+# Excluir archivos binarios
+*.obj
+*.exe
+*.dll
+*.zip
+*.gz
+*.rar
+
+# Excluir archivos de configuración
+*.config
+*.vs
+*.csproj
+*.vcxproj
+
+# Excluir archivos temporales
+*.tmp
+*.log
+*.pdb
+*.ipch
+
+# Excluir archivos de depuración
+*.ncb
+*.suo
+*.user
+
+# Excluir archivos de Visual Studio
+*.sln
+*.v11.suo
+*.v12.suo
+*.v14.suo
+*.v15.suo
+
+# Excluir archivos de Visual Studio Code
+.vscode/
