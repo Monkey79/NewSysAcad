@@ -1,6 +1,0 @@
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Entities\bin\Debug\NewSysAcad.Entities.dll
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Entities\bin\Debug\NewSysAcad.Entities.pdb
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Entities\obj\Debug\NewSysAcad.Entities.csproj.AssemblyReference.cache
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Entities\obj\Debug\NewSysAcad.Entities.csproj.CoreCompileInputs.cache
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Entities\obj\Debug\NewSysAcad.Entities.dll
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Entities\obj\Debug\NewSysAcad.Entities.pdb
