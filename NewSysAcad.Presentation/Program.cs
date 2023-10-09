@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewSysAcad.Presentation.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,7 +16,9 @@ namespace NewSysAcad.Presentation
         static void Main(){
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewSysAcadMainForm());
+            //Application.Run(new NewSysAcadMainForm());
+
+            Application.Run(new LoginForm());
         }
     }
 }

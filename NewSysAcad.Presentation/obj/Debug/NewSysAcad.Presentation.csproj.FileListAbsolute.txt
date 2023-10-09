@@ -28,7 +28,6 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAc
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\BouncyCastle.Crypto.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Buffers.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.IO.Pipelines.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\K4os.Hash.xxHash.xml
@@ -45,3 +44,5 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAc
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.csproj.SuggestedBindingRedirects.cache
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.exe.config
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.Views.LoginForm.resources
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\BCrypt.Net-Next.xml

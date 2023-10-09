@@ -4,6 +4,7 @@ using NewSysAcad.DataAccess.Impl;
 using NewSysAcad.Entities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,13 +21,15 @@ namespace NewSysAcad.Business.Impl
 
         public Response CreateUser(User user) {
             string pssHash = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password, 13);
-            User userReg = _userRepository.GetByCredential(user.Name, pssHash);            
+            User userReg = _userRepository.GetByCredential(user.Name, pssHash);
             Response response = new Response();
 
-            if (user != null) {
+            if (userReg != null) {
                 response.Status = Response.ERROR;
                 response.Message = "el usuario que desea crear ya fue registrado";
             }else {
+                user.Password = pssHash;
+                user.Role = UserRole.Admin;
                 response = _userRepository.Save(user);
             }
             return response;

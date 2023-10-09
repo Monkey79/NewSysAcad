@@ -1,4 +1,6 @@
-﻿using NewSysAcad.Entities;
+﻿using NewSysAcad.Business;
+using NewSysAcad.Business.Impl;
+using NewSysAcad.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +15,13 @@ namespace NewSysAcad.Presentation.Views
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
-        {
+        private UserService _userSrvc;
+        public LoginForm() {
             InitializeComponent();
+            _userSrvc = new UserServiceImpl();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        private void panel1_Paint(object sender, PaintEventArgs e) {
 
         }
 
@@ -28,11 +30,17 @@ namespace NewSysAcad.Presentation.Views
         }
 
         private void BtnLogin_Click(object sender, EventArgs e){
+            Response resp = null;
             User user;
-            try { 
+            try {
+                user = new User();
+                user.Name = TXUserName.Text;
+                user.Password = TXPassword.Text;
 
-
-            }catch(Exception ex) {
+                resp = _userSrvc.CreateUser(user);
+                MessageBox.Show(resp.Message);
+            }
+            catch(Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
