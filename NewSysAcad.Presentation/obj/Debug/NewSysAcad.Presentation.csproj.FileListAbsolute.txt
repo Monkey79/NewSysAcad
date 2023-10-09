@@ -27,14 +27,11 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAc
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\Google.Protobuf.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\BouncyCastle.Crypto.xml
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Memory.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Buffers.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.IO.Pipelines.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\K4os.Hash.xxHash.xml
-C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.csproj.AssemblyReference.cache
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.NewSysAcadMainForm.resources
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.Properties.Resources.resources
@@ -45,3 +42,6 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAc
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.csproj.CopyComplete
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.exe
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.pdb
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.exe.config
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.Views.LoginForm.resources

@@ -39,3 +39,5 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAc
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.DataAccess\obj\Debug\NewSysAcad.DataAccess.csproj.CopyComplete
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.DataAccess\obj\Debug\NewSysAcad.DataAccess.dll
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.DataAccess\obj\Debug\NewSysAcad.DataAccess.pdb
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.DataAccess\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.DataAccess\bin\Debug\BCrypt.Net-Next.xml

@@ -37,3 +37,5 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAc
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Business\obj\Debug\NewSysAcad.Business.csproj.CopyComplete
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Business\obj\Debug\NewSysAcad.Business.dll
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Business\obj\Debug\NewSysAcad.Business.pdb
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Business\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\LabProgSlt\NewSysAcad\NewSysAcad.Business\bin\Debug\BCrypt.Net-Next.xml

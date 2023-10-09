@@ -10,5 +10,8 @@ namespace NewSysAcad.Business
     public interface UserService
     {
         List<User> GetAllUsers();
+
+        Response CreateUser(User user);
+        User GetUserByName(User user);
     }
 }
