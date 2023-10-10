@@ -1,4 +1,5 @@
-﻿using NewSysAcad.Entities;
+﻿using NewSysAcad.Business.Dto;
+using NewSysAcad.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,6 @@ namespace NewSysAcad.Business
         List<User> GetAllUsers();
 
         Response CreateUser(User user);
-        User GetUserByName(User user);
+        UserDto GetUserByCredential(UserDto userDto);
     }
 }

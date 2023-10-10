@@ -15,7 +15,7 @@ namespace NewSysAcad.DataAccess.Impl
 {
     public class UserRepositoryImpl : BaseRepository, UserRepository
     {
-        private const string GET_BY_CREDENTIAL = "SELECT * from users WHERE us_name=@name and us_password=@password";
+        private const string GET_BY_NAME = "SELECT * from users WHERE us_name=@name";
 
         private const string GET_ALL     = "SELECT * FROM users";
 
@@ -60,16 +60,14 @@ namespace NewSysAcad.DataAccess.Impl
             throw new NotImplementedException();
         }
 
-        public User GetByCredential(string userName, string password) {
-            List<User> users = new List<User>();
+        public User GetByName(string userName) {
             MySqlConnection _mySqlConn = _dbConn.CreateConnection();
             User user = null;
 
             try{
                 _mySqlConn.Open();
-                _mySqlCommand = new MySqlCommand(GET_BY_CREDENTIAL, _mySqlConn);
-                _mySqlCommand.Parameters.AddWithValue("@name", userName);
-                _mySqlCommand.Parameters.AddWithValue("@password", password);
+                _mySqlCommand = new MySqlCommand(GET_BY_NAME, _mySqlConn);
+                _mySqlCommand.Parameters.AddWithValue("@name", userName);                
                 _mySqlDataReader = _mySqlCommand.ExecuteReader();
 
                 while (_mySqlDataReader.Read()){
@@ -78,8 +76,6 @@ namespace NewSysAcad.DataAccess.Impl
                     user.Name = _mySqlDataReader.GetString("us_name");
                     user.Password = _mySqlDataReader.GetString("us_password");
                     user.Role = (UserRole)_mySqlDataReader.GetInt32("us_role");
-
-                    users.Add(user);
                 }
             }catch (Exception e){
                 throw e;
