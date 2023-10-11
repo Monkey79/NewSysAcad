@@ -94,3 +94,7 @@ C:\Users\admin\mdangelo_root\personal\4_utn\labo2\repos\NewSysAcad\NewSysAcad.Pr
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\repos\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.csproj.CopyComplete
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\repos\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.exe
 C:\Users\admin\mdangelo_root\personal\4_utn\labo2\repos\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.pdb
+<<<<<<< HEAD
+=======
+C:\Users\admin\mdangelo_root\personal\4_utn\labo2\repos\NewSysAcad\NewSysAcad.Presentation\obj\Debug\NewSysAcad.Presentation.Views.StudentForm.resources
+>>>>>>> d0b4db1e78ee7fa5d4014c5f31b10dc0d51bfdd5

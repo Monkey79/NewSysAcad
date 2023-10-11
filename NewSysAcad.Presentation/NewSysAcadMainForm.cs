@@ -1,8 +1,10 @@
-﻿using NewSysAcad.Presentation.Views;
+﻿using NewSysAcad.Business.Dto;
+using NewSysAcad.Presentation.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,10 +16,13 @@ namespace NewSysAcad.Presentation
     public partial class NewSysAcadMainForm : Form
     {
         private int childFormNumber = 0;
+        private UserDto _logedUser;
 
-        public NewSysAcadMainForm()
-        {
+        public UserDto LogedUser { get => _logedUser; set => _logedUser = value; }
+
+        public NewSysAcadMainForm() {
             InitializeComponent();
+            this.FormClosing += MdiForm_ClosingHndl;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -107,6 +112,21 @@ namespace NewSysAcad.Presentation
             SubjectForm subjectForm = new SubjectForm();
             subjectForm.MdiParent = this;
             subjectForm.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void NewSysAcadMainForm_Load(object sender, EventArgs e){
+            MessageBox.Show("Bienvenido "+ _logedUser.UserName);            
+        }
+        private void MdiForm_ClosingHndl(object sender, FormClosingEventArgs e) {            
+            Application.Exit();        
+        }
+
+        private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e) {
+
         }
     }
 }

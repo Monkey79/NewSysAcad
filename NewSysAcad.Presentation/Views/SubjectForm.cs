@@ -25,6 +25,12 @@ namespace NewSysAcad.Presentation.Views
             InitializeComponent();
 
             _subjectService = new SubjectServiceImpl();
+            this.FormClosing += SubjectFormClosing_Hndl;
+        }
+
+        private void SubjectFormClosing_Hndl(object sender, EventArgs e) { 
+            //this.Close();
+            //Application.Exit();
         }
 
         private void SubjectForm_Load(object sender, EventArgs e){

@@ -11,6 +11,6 @@ namespace NewSysAcad.DataAccess
 {
     public interface UserRepository : CommonCrudOps<User>
     {
-        User GetByCredential(string userName, string password);
+        User GetByName(string userName);
     }
 }

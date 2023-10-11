@@ -1,4 +1,4 @@
-﻿using BCrypt.Net;
+﻿using NewSysAcad.Business.Dto;
 using NewSysAcad.DataAccess;
 using NewSysAcad.DataAccess.Impl;
 using NewSysAcad.Entities;
@@ -19,17 +19,16 @@ namespace NewSysAcad.Business.Impl
             _userRepository = new UserRepositoryImpl();
         }
 
-        public Response CreateUser(User user) {
-            string pssHash = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password, 13);
-            User userReg = _userRepository.GetByCredential(user.Name, pssHash);
+        public Response CreateUser(User user){
             Response response = new Response();
-
-            if (userReg != null) {
+            User userReg = _userRepository.GetByName(user.Name);
+            if (userReg != null){
                 response.Status = Response.ERROR;
-                response.Message = "el usuario que desea crear ya fue registrado";
-            }else {
-                user.Password = pssHash;
-                user.Role = UserRole.Admin;
+                response.Message = "el usuario que desea crear ya esta registrado";
+            }else{
+                string pswHsh = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password, 13);
+                user.Password = pswHsh;
+                user.Role = UserRole.Admin; //change
                 response = _userRepository.Save(user);
             }
             return response;
@@ -43,8 +42,23 @@ namespace NewSysAcad.Business.Impl
             return users;
         }
 
-        public User GetUserByName(User user) {
-            throw new NotImplementedException();
+        public UserDto GetUserByCredential(UserDto userDto) {
+            User userReg = _userRepository.GetByName(userDto.UserName);
+            UserDto userLogedDto = new UserDto();
+
+            if (userReg != null){
+                bool hsRslt = BCrypt.Net.BCrypt.EnhancedVerify(userDto.Password, userReg.Password);
+                if (hsRslt){
+                    userLogedDto.UserName = userReg.Name;
+                    userLogedDto.UserRole = userReg.Role.ToString();
+                    userLogedDto.LoginStatus = UserDto.OK;
+                    userLogedDto.LoginMssg = UserDto.SUCCESS_MSG;
+                }else{
+                    userLogedDto.LoginStatus = UserDto.ERROR;
+                    userLogedDto.LoginMssg = UserDto.ERROR_MSG;
+                }
+            }
+            return userLogedDto;
         }
     }
 }
