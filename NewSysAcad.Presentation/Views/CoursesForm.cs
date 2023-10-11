@@ -32,6 +32,13 @@ namespace NewSysAcad.Presentation.Views
             _courseService = new CourseServiceImpl();
             _subjectService = new SubjectServiceImpl();
             _selectedDays = new List<string>();
+
+            this.FormClosing += LoginFormClosing_Hndl;
+        }
+
+        private void LoginFormClosing_Hndl(object sender, FormClosingEventArgs e) {
+            //this.Close();
+            //Application.Exit();
         }
 
         private void FormatCourseDGV() {

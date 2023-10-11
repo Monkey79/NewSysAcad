@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CourseService.cs" />
+    <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Impl\BaseService.cs" />
     <Compile Include="Impl\CourseServiceImpl.cs" />
     <Compile Include="Impl\SubjectServiceImpl.cs" />
