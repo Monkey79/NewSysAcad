@@ -41,7 +41,7 @@ namespace NewSysAcad.Presentation.Views
 
                 userDto = _userSrvc.GetUserByCredential(userDto);
                 if (userDto.LoginStatus.Equals(UserDto.OK)){
-                    _mainForm = new NewSysAcadMainForm();
+                    _mainForm = new NewSysAcadMainForm();                    
                     _mainForm.LogedUser = userDto;
                     _mainForm.Show();
                     this.Hide();
@@ -55,6 +55,11 @@ namespace NewSysAcad.Presentation.Views
 
         private void LoginForm_Load(object sender, EventArgs e){
 
+        }
+
+        private void label1_Click(object sender, EventArgs e){
+            TXUserName.Clear(); 
+            TXPassword.Clear();
         }
     }
 }

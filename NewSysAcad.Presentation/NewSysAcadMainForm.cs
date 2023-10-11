@@ -118,13 +118,15 @@ namespace NewSysAcad.Presentation
             Application.Exit();
         }
 
-        private void NewSysAcadMainForm_Load(object sender, EventArgs e)
-        {
-
+        private void NewSysAcadMainForm_Load(object sender, EventArgs e){
+            MessageBox.Show("Bienvenido "+ _logedUser.UserName);            
         }
-        private void MdiForm_ClosingHndl(object sender, FormClosingEventArgs e) {
-            Debug.WriteLine("----CLOSING FORM-----");
+        private void MdiForm_ClosingHndl(object sender, FormClosingEventArgs e) {            
             Application.Exit();        
+        }
+
+        private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e) {
+
         }
     }
 }
