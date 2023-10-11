@@ -1,16 +1,14 @@
-# Excluir archivos binarios
-*.obj
-*.exe
-*.dll
-*.zip
-*.gz
-*.rar
+# Ignorar carpetas bin y obj en todos los proyectos
+**/bin/
+**/obj/
 
-# Excluir archivos de configuración
-*.config
-*.vs
-*.csproj
-*.vcxproj
+# Ignorar archivos de configuración de Visual Studio
+*.user
+*.suo
+*.sln.docstates
+
+# Ignorar archivos de caché de Visual Studio Code
+.vscode/
 
 # Excluir archivos temporales
 *.tmp
@@ -29,6 +27,3 @@
 *.v12.suo
 *.v14.suo
 *.v15.suo
-
-# Excluir archivos de Visual Studio Code
-.vscode/
