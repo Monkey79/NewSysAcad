@@ -23,7 +23,4 @@
 
 # Excluir archivos de Visual Studio
 *.sln
-*.v11.suo
-*.v12.suo
-*.v14.suo
-*.v15.suo
+**/vs/NewSysAcad/**/*.suo
