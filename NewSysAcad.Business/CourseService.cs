@@ -13,5 +13,7 @@ namespace NewSysAcad.Business
         int GetLastCourseCodeBySubjectCode(int subjCode);
         Response CreateCourse(Course course);
         Response UpdateCourse(Course course, int oldCrsCode);
+
+        Response DeleteCourseAndTheirEnrollmentsByCode(List<int> codes);
     }
 }

@@ -11,8 +11,9 @@ namespace NewSysAcad.DataAccess
     public interface CourseRepository : CommonCrudOps<Course>
     {
         int GetLastCourseCodeBySubjCode(int subjCode);
-        Course GetBYCode(int crCode);
-
+        Course GetByCode(int crCode);
         Response Update(Course course, int oldCrsCode);
+
+        String DeleteAndEnrollmentsByCode(int code);
     }
 }

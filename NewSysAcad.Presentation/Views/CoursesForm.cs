@@ -396,5 +396,30 @@ namespace NewSysAcad.Presentation.Views
                 dgVwChBxCll.Value = !Convert.ToBoolean(dgVwChBxCll.Value);
             }
         }
+
+        private void BtnDltCrs_Click(object sender, EventArgs e) {
+            Response resp = null;
+            List<int> crsCodeDelete = new List<int>();
+            try {
+                DialogResult dlgRsl = MessageBox.Show("esta seguro de eliminar el/los curso/?s","eliminar",MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dlgRsl == DialogResult.OK) {
+                    foreach (DataGridViewRow row in CoursesDGV.Rows) {
+                        if (Convert.ToBoolean(row.Cells[0].Value)) {
+                            crsCodeDelete.Add(Convert.ToInt32(row.Cells[2].Value));
+                        }
+                    }
+                }
+                resp = _courseService.DeleteCourseAndTheirEnrollmentsByCode(crsCodeDelete);
+
+                foreach (string mssg in resp.Messages) { 
+                    Debug.WriteLine("->"+mssg);
+                }
+                ListAllSubjects();
+                ListAllCourses();
+            }
+            catch(Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        }
     }
 }

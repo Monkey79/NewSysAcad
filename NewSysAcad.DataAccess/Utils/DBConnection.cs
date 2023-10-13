@@ -15,6 +15,7 @@ namespace NewSysAcad.DataAccess.Utils
         private string _password;
         
         private static DBConnection _instance = null;
+        private MySqlConnection _mySqlConn;
 
         private DBConnection() {
             _databaseName = "sysacad_db";
@@ -24,19 +25,20 @@ namespace NewSysAcad.DataAccess.Utils
             _password = "root";
         }
 
-        public MySqlConnection CreateConnection() {
-            MySqlConnection conn = new MySqlConnection();
+        public MySqlConnection CreateConnection() {            
+            if(_mySqlConn == null) _mySqlConn = new MySqlConnection();
+            
             try{
-                conn.ConnectionString = "server=" + this._hostName + ";uid=" + _user + ";pwd=" + _password + ";database=" + _databaseName;
+                _mySqlConn.ConnectionString = "server=" + this._hostName + ";uid=" + _user + ";pwd=" + _password + ";database=" + _databaseName;
 
             }catch (Exception ex){
-                conn = null;
+                _mySqlConn = null;
                 throw ex;
             }finally { 
-                if(conn!= null) conn.Close();
+                if(_mySqlConn != null) _mySqlConn.Close();
             }
 
-            return conn;
+            return _mySqlConn;
         }  
         
         public static DBConnection GetInstance() {
