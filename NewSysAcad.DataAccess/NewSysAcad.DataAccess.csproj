@@ -97,8 +97,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CourseRepository.cs" />
+    <Compile Include="EnrollmentRepository.cs" />
     <Compile Include="Impl\BaseRepository.cs" />
     <Compile Include="Impl\CourseRepositoryImpl.cs" />
+    <Compile Include="Impl\EnrollmentRepositoryImpl.cs" />
     <Compile Include="Impl\RepositoryMng.cs" />
     <Compile Include="Impl\SubjectRepositoryImpl.cs" />
     <Compile Include="SubjectRepository.cs" />

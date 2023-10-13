@@ -3,6 +3,7 @@ using NewSysAcad.DataAccess.Impl;
 using NewSysAcad.Entities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace NewSysAcad.Business.Impl
         }
 
         public Response CreateCourse(Course course){
-            Course courseCrtd = _courseRep.GetBYCode(course.Code);
+            Course courseCrtd = _courseRep.GetByCode(course.Code);
             Response createdResp = new Response();
             if (courseCrtd != null){
                 createdResp.Status = Response.ERROR;
@@ -27,6 +28,15 @@ namespace NewSysAcad.Business.Impl
                 createdResp = _courseRep.Save(course);
             }
             return createdResp;
+        }
+
+        public Response DeleteCourseAndTheirEnrollmentsByCode(List<int> codes) {
+            Response resp = new Response();
+            foreach (int code in codes) {
+                resp.Messages.Add(_courseRep.DeleteAndEnrollmentsByCode(code));                            
+            }
+            resp.Status = Response.OK;
+            return resp;
         }
 
         public List<Course> GetAllCourses(){
@@ -48,7 +58,7 @@ namespace NewSysAcad.Business.Impl
         }
 
         public Response UpdateCourse(Course course, int oldCrsCode) {
-            Course courseCrtd = _courseRep.GetBYCode(oldCrsCode);
+            Course courseCrtd = _courseRep.GetByCode(oldCrsCode);
             Response updatedResp = new Response();
             if (courseCrtd == null) {
                 updatedResp.Status = Response.ERROR;

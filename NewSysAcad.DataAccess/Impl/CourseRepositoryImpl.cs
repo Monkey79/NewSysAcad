@@ -2,6 +2,8 @@
 using NewSysAcad.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,13 +43,57 @@ namespace NewSysAcad.DataAccess.Impl
               "cr_shift = @shift " +
               "WHERE cr_code = @crCode";
 
+        private const string DELETE = "DELETE FROM courses WHERE cr_code=@crsCode";
+        private const string DELETE_ENROLLMENT = "DELETE FROM enrollments WHERE er_cr_code=@enCrsCode";
+
         public CourseRepositoryImpl():base() {
 
         }
 
-        public Response Delete(Course t)
-        {
+        public Response Delete(Course t) {
             throw new NotImplementedException();
+        }
+
+        public String DeleteAndEnrollmentsByCode(int code) {
+            MySqlTransaction mySqlTrns = null;
+            string mssgFnl = null;
+            int rwCnt = 0; 
+            try
+            {
+                _mySqlConn.Open();
+                using (mySqlTrns = _mySqlConn.BeginTransaction()) {
+                    //-------------elimino todas las suscripciones de un curso
+                    _mySqlCommand = new MySqlCommand(DELETE_ENROLLMENT, _mySqlConn);
+                    _mySqlCommand.Parameters.AddWithValue("@enCrsCode", code);
+                    rwCnt = _mySqlCommand.ExecuteNonQuery();
+                    string mssg2=null;
+                    if (rwCnt > 0){
+                        mssg2 = "Inscripciones eliminadas para el curso " + code + " fueron " + rwCnt;
+                    }else if (rwCnt <= 0){
+                        mssg2 = "NO se encontraron inscripciones para el curso: " + code;
+                    }
+
+                    //-------------elimino el curso
+                    _mySqlCommand = new MySqlCommand(DELETE, _mySqlConn);
+                    _mySqlCommand.Parameters.AddWithValue("@crsCode", code);
+                    rwCnt = _mySqlCommand.ExecuteNonQuery();
+                    string mssg1=null;
+                    if (rwCnt == 1) {
+                        mssg1 = "Curso codigo:" + code + " eliminado\n";                        
+                    }
+                    mssgFnl = mssg1 + mssg2;
+                    mySqlTrns.Commit();
+                }
+            }catch (Exception e){  
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                mySqlTrns.Rollback();
+                throw e;
+            }finally {
+                if (_mySqlConn != null && _mySqlConn.State.Equals(ConnectionState.Open))  
+                    _mySqlConn.Close();
+            }
+            return mssgFnl;
         }
 
         public List<Course> GetAll() {
@@ -85,7 +131,7 @@ namespace NewSysAcad.DataAccess.Impl
             return courses;
         }
 
-        public Course GetBYCode(int crCode) {
+        public Course GetByCode(int crCode) {
             Console.WriteLine("*****[REPO] GetByCode*******");
             Course course = null;
             try{

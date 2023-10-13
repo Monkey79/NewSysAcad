@@ -33,6 +33,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.CoursesDGV = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.CrCodeTxBx = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.BtnCrsUpdt = new System.Windows.Forms.Button();
             this.SbjLBx = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CrErrPrvd = new System.Windows.Forms.ErrorProvider(this.components);
             this.BtnDltCrs = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.CrCodeTxBx = new System.Windows.Forms.TextBox();
             this.CourseMainTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoursesDGV)).BeginInit();
@@ -133,6 +133,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Create/Update";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // CrCodeTxBx
+            // 
+            this.CrCodeTxBx.Location = new System.Drawing.Point(648, 17);
+            this.CrCodeTxBx.Name = "CrCodeTxBx";
+            this.CrCodeTxBx.Size = new System.Drawing.Size(100, 20);
+            this.CrCodeTxBx.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(568, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Codigo Curso:";
             // 
             // BtnCrsUpdt
             // 
@@ -337,22 +353,7 @@
             this.BtnDltCrs.TabIndex = 1;
             this.BtnDltCrs.Text = "Eliminar";
             this.BtnDltCrs.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(568, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Codigo Curso:";
-            // 
-            // CrCodeTxBx
-            // 
-            this.CrCodeTxBx.Location = new System.Drawing.Point(648, 17);
-            this.CrCodeTxBx.Name = "CrCodeTxBx";
-            this.CrCodeTxBx.Size = new System.Drawing.Size(100, 20);
-            this.CrCodeTxBx.TabIndex = 23;
+            this.BtnDltCrs.Click += new System.EventHandler(this.BtnDltCrs_Click);
             // 
             // CoursesForm
             // 

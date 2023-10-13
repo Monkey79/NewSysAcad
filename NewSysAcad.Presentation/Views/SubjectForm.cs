@@ -26,6 +26,7 @@ namespace NewSysAcad.Presentation.Views
 
             _subjectService = new SubjectServiceImpl();
             this.FormClosing += SubjectFormClosing_Hndl;
+            BtnDelSubj.Enabled = false;
         }
 
         private void SubjectFormClosing_Hndl(object sender, EventArgs e) { 
